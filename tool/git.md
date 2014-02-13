@@ -3,24 +3,30 @@ Gitのtips
 
 ##ブランチ
 ###一覧
-    ローカル: git branch
-    リモート: git branch -r
++ ローカル: git branch
++ リモート: git branch -r
+
+###作成
++ リモートへpush
 
 ###削除
-    ローカル: git branch -D [branch_name]
-    リモート: git push [remote_name] :[branch_name]
++ ローカル: git branch -D [branch_name]
++ リモート: git push [remote_name] :[branch_name]
+
+###取り消し
++ リモート戻し: git push -f origin HEAD^:master  
+**危険な操作** リモートで他の人が操作している可能性がある。
 
 ##tag
 ###作成
-    説明なし: git tag [tag_name]
-    説明付き: git tag -a [tag_name]
++ 説明なし: git tag [tag_name]
++ 説明付き: git tag -a [tag_name]
 
 ###一覧
-    名前のみ: git tag
-    説明付き: git tag -n
++ 名前のみ: git tag
++ 説明付き: git tag -n
 
-    リモート: git ls-remote --tags
-    http://renoiv.com/2012/08/06/git%E3%81%AE%E3%82%BF%E3%82%B0%E6%93%8D%E4%BD%9C%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%BE%E3%81%A8%E3%82%81/
++ リモート: git ls-remote --tags [(参考)][remote]
 
 ###削除
     git tag -d [tag_name]
@@ -28,14 +34,12 @@ Gitのtips
 ###リモートへタグ追加
     git push origin [tag_namee]
 
-・tag追記予定
-http://at-aka.blogspot.jp/2009/02/git.html
+・[tag追記予定](http://at-aka.blogspot.jp/2009/02/git.html)
 
 ##pushしていないコミットの差分
     git log [remote_name]/[branch_name]..[branch_name]
 
-##git logに変更したファイルも表示
-http://yuroyoro.hatenablog.com/entry/20101008/1286531851
+##[git logに変更したファイルも表示][log_withfile]
     git log --stat
     git whatchanged
 
@@ -64,4 +68,7 @@ http://yuroyoro.hatenablog.com/entry/20101008/1286531851
 ###ほかのリポジトリとの連携を行うコマンド
     git pull	ほかのリポジトリの変更点をローカルリポジトリにマージする
     git push	公開リポジトリに自分のリポジトリの内容を送信する
+
+[remote]: http://renoiv.com/2012/08/06/git%E3%81%AE%E3%82%BF%E3%82%B0%E6%93%8D%E4%BD%9C%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%BE%E3%81%A8%E3%82%81/
+[log_withfile]: http://yuroyoro.hatenablog.com/entry/20101008/1286531851
 
