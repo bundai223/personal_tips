@@ -3,30 +3,43 @@ Gitのtips
 
 ## ブランチ
 ### 一覧
-+ ローカル: git branch
-+ リモート: git branch -r
++ ローカル
+        git branch
++ リモート
+        git branch -r
 
 ### 作成
++ リモートから取得しつつ作成
+        git checkout -b [branch_name] [remote_branch_name]
+
 + リモートへpush
 
 ### 削除
-+ ローカル: git branch -D [branch_name]
-+ リモート: git push [remote_name] :[branch_name]
++ ローカル
+        git branch -D [branch_name]
++ リモート
+        git push [remote_name] :[branch_name]
 
 ### 取り消し
-+ リモート戻し: git push -f origin HEAD^:master  
++ リモート戻し
+        git push -f origin HEAD^:master  
 **危険な操作** リモートで他の人が操作している可能性がある。
 
 ## tag
 ### 作成
-+ 説明なし: git tag [tag_name]
-+ 説明付き: git tag -a [tag_name]
++ 説明なし
+        git tag [tag_name]
++ 説明付き
+        git tag -a [tag_name]
 
 ### 一覧
-+ 名前のみ: git tag
-+ 説明付き: git tag -n
++ 名前のみ
+        git tag
++ 説明付き
+        git tag -n
 
-+ リモート: git ls-remote --tags [(参考)][remote]
++ リモート
+        git ls-remote --tags [(参考)][remote]
 
 ### 削除
     git tag -d [tag_name]
