@@ -47,6 +47,7 @@ Gitのtips
 ###  表示
     git config -l
 ###  remoteのurl表示
+    git remote -v
     git config -l|grep url
 ###  remoteの追加・変更
     git remote set-url [remote_name] [url(ex: git@git.example.com:foo/bar.git)]
