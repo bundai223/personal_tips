@@ -56,6 +56,9 @@ Gitのtips
     git log --stat
     git whatchanged
 
+## [指定の関数のみのlog・diffを表示][log_func]
+    git log -L :[regex]:[file]
+
 ##  リポジトリの情報
 ###  表示
     git config -l
@@ -65,6 +68,8 @@ Gitのtips
 ###  remoteの追加・変更
     git remote set-url [remote_name] [url(ex: git@git.example.com:foo/bar.git)]
 
+## 一時的な変更の退避・適用
+[stash いろいろ便利][stash_exp]
 
 ## コマンド一覧
 ### リポジトリの作成およびメンテナンスに利用するコマンド
@@ -91,6 +96,8 @@ Gitのtips
     git pull	ほかのリポジトリの変更点をローカルリポジトリにマージする
     git push	公開リポジトリに自分のリポジトリの内容を送信する
 
+<!-- URL -->
 [remote]: http://renoiv.com/2012/08/06/git%E3%81%AE%E3%82%BF%E3%82%B0%E6%93%8D%E4%BD%9C%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%81%BE%E3%81%A8%E3%82%81/
 [log_withfile]: http://yuroyoro.hatenablog.com/entry/20101008/1286531851
-
+[log_func]: http://daretoku-unix.blogspot.jp/2014/02/gitgit-log-l.html?spref=tw
+[stash_exp]: http://qiita.com/fukajun/items/41288806e4733cb9c342
