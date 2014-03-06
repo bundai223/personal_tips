@@ -1,6 +1,9 @@
 Gitのtips
 ============
 
+## いろいろまとめたサンプル
+https://github.com/bundai223/dotfiles/blob/master/.gitconfig 
+
 ## ブランチ
 ### 一覧
 + ローカル
@@ -70,6 +73,9 @@ Gitのtips
 
 ## 一時的な変更の退避・適用
 [stash いろいろ便利][stash_exp]
+
+### 一度適用したstashの取り消し
+    git stash show stash@{n} -p | git apply -R
 
 ## コマンド一覧
 ### リポジトリの作成およびメンテナンスに利用するコマンド
