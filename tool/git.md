@@ -25,7 +25,7 @@ https://github.com/bundai223/dotfiles/blob/master/.gitconfig
 
 ### 取り消し
 + リモート戻し
-        git push -f origin HEAD^:master  
+        git push -f origin HEAD~:master  
 **危険な操作** リモートで他の人が操作している可能性がある。
 
 ## tag
