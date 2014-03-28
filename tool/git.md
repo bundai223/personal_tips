@@ -4,6 +4,25 @@ Gitのtips
 ## いろいろまとめたサンプル
 https://github.com/bundai223/dotfiles/blob/master/.gitconfig 
 
+## よくつかう細々とした操作
+### (pushしていない状態で) 直前のcommitをやり直し
+    git commit -m "wrong commit."
+    git add forgot/change_files
+    git commit -m "collect commit."
+
+### pushしていないコミットの差分
+    git log [remote_name]/[branch_name]..[branch_name]
+
+### [git logに変更したファイルも表示][log_withfile]
+    git log --stat
+    git whatchanged
+
+### [指定の関数のみのlog・diffを表示][log_func]
+    git log -L :[regex]:[file]
+
+### stageしたファイルとremoteとの差分
+    git diff --cached
+
 ## ブランチ
 ### 一覧
 + ローカル
@@ -16,6 +35,7 @@ https://github.com/bundai223/dotfiles/blob/master/.gitconfig
         git checkout -b [branch_name] [remote_branch_name]
 
 + リモートへpush
+        git push [remote_name] [branch_name]
 
 ### 削除
 + ローカル
@@ -51,16 +71,6 @@ https://github.com/bundai223/dotfiles/blob/master/.gitconfig
     git push origin [tag_namee]
 
 ・[tag追記予定](http://at-aka.blogspot.jp/2009/02/git.html)
-
-## pushしていないコミットの差分
-    git log [remote_name]/[branch_name]..[branch_name]
-
-## [git logに変更したファイルも表示][log_withfile]
-    git log --stat
-    git whatchanged
-
-## [指定の関数のみのlog・diffを表示][log_func]
-    git log -L :[regex]:[file]
 
 ##  リポジトリの情報
 ###  表示
