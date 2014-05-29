@@ -27,6 +27,7 @@ https://github.com/bundai223/dotfiles/blob/master/.gitconfig
 ### 一覧
 + ローカル
         git branch
+        git branch -vv # 追跡branchなども表示
 + リモート
         git branch -r
 
